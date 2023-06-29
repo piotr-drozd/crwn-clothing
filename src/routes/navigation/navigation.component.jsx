@@ -15,10 +15,10 @@ return(
             </Link>
             <div className="nav-links-container">
                 <Link className="nav-link" to='/shop'>
-                    <div>Shop</div>
+                    <div>SHOP</div>
                 </Link>
-                <Link className="nav-link" to='/sign-in'>
-                    <div>Sign In</div>
+                <Link className="nav-link" to='/auth'>
+                    <div>SIGN IN</div>
                 </Link>
             </div>
         </div>
