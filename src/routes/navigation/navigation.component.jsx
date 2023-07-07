@@ -7,7 +7,7 @@ import { CartContext } from "../../contexts/cart.context";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { ReactComponent as CrownLogo} from "../../assets/crown.svg";
+import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 
 
 import { signOutUser } from '../../utils/firebase.utils'
@@ -15,14 +15,14 @@ import { signOutUser } from '../../utils/firebase.utils'
 import '../navigation/navigation.styles.scss'
 
 
-const Navigation = ()=>{
-const { currentUser, setCurrentUser } = useContext(UserContext);
-const { isCartOpen } = useContext(CartContext);
+const Navigation = () => {
+    const { currentUser, setCurrentUser } = useContext(UserContext);
+    const { isCartOpen } = useContext(CartContext);
 
-//const signOutHandler = async () => {
-//    await signOutUser();
-//    setCurrentUser (null);
-//}
+    //const signOutHandler = async () => {
+    //    await signOutUser();
+    //    setCurrentUser (null);
+    //}
 
     return (
         <Fragment>

@@ -42,8 +42,8 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
 
-export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {displayName: ''}) => {
-if(!userAuth) return;
+export const createUserDocumentFromAuth = async (userAuth, additionalInformation = { displayName: '' }) => {
+  if (!userAuth) return;
 
 
   const userDocRef = doc(db, 'users', userAuth.uid);
@@ -79,7 +79,7 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
   console.log(email)
   console.log(password)
 
-  if(!email || !password) return;
+  if (!email || !password) return;
 
   try {
     const userData = await createUserWithEmailAndPassword(auth, email, password)
@@ -90,13 +90,13 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
   } catch (error) {
     console.log(error.message)
   }
-  
+
 
 }
 
 export const signInAuthWithEmailAndPassword = async (email, password) => {
 
-  if(!email || !password) return;
+  if (!email || !password) return;
 
   try {
     const user = await signInWithEmailAndPassword(auth, email, password);
@@ -113,5 +113,5 @@ export const signOutUser = async () => {
   await signOut(auth);
 }
 
-export const onAuthStateChangedListener = (callback) => 
-onAuthStateChanged(auth, callback);
+export const onAuthStateChangedListener = (callback) =>
+  onAuthStateChanged(auth, callback);
