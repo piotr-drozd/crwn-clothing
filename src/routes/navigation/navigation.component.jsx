@@ -19,11 +19,6 @@ const Navigation = () => {
     const { currentUser, setCurrentUser } = useContext(UserContext);
     const { isCartOpen } = useContext(CartContext);
 
-    //const signOutHandler = async () => {
-    //    await signOutUser();
-    //    setCurrentUser (null);
-    //}
-
     return (
         <Fragment>
             <div className="navigation">
