@@ -4,7 +4,7 @@ import { useState } from "react"
 import {
     signInAuthWithEmailAndPassword,
     signInWithGooglePopup,
-} from '../../utils/firebase.utils'
+} from '../../utils/firebase/firebase.utils'
 import Button, { BUTTON_TYPE_CLASSES } from '../../components/button/button.component';
 
 const defaultFormFields = {
