@@ -67,14 +67,11 @@ export const getCategoriesAndDocuments = async () => {
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
-  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
-    const { title, items } = docSnapshot.data();
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {});
+  const category = querySnapshot.docs.map(docSnapshot => docSnapshot.data());
+  console.log(category);
 
-  return categoryMap;
-}
+  return category;
+};
 
 export const createUserDocumentFromAuth = async (userAuth, additionalInformation = { displayName: '' }) => {
   if (!userAuth) return;
@@ -102,8 +99,6 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
     } catch (error) {
       console.log('error creating the user', error.message);
     }
-
-
   }
 
   return userDocRef
